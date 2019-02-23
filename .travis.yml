@@ -1,24 +1,19 @@
 sudo: required
 addons:
   chrome: stable
-
 language: node_js
 node_js:
   - '10'
-
 branches:
   only:
     - master
-
 before_script:
   - npm install -g @angular/cli
-
 script:
-  - ./build_project.sh
-  - ./deploy_project.sh
-
+  - './build_project.sh'
+  - './deploy_project.sh'
 deploy:
   provider: heroku
   api_key:
-    secure: d7be8534-22c7-4377-98f7-cc4d25c170ce
-    app: recipe-app-sauasmast
+    secure: JEw/tKGI5Ttu1PfhvDjF4C0E6z7cSRIAi9F/RxDvg0BbB0xhUze4vSf4HS2vffiifjwz6cOe/PB3lP2H89G3fLLRkvWTM9+ifB/VLACyA/5m/vNPnlcyVI3uf3+OOGIdeUUvpgVQfEAC01BttqTsDrDH6fUH9YEiI3PYApTGU9pIltLgV7D/5ezYNhq4gGD1IvjId1iO+3P32aIUU7p8GVO7Skfqv/vM4X/DBMUjjVwGdqL2KcgNhYIxxRoP4qLSNQDNoo4EEqxeTUN41CcUfJR6fr3xEwGNdp2d1TUTg3UTYaTpeqcl5dNNo+1j+AMsAmqnUIPXLICZ1Gu8g1JtTvyWF6rxHoOdeAOvkcBgF+PlHN0jPTvWO+tjTP7S5HSRqF9QhG2rWmw6Etm0+Vq984J246T/MhsI2jZGvyRm/dGQ1x97CFy9HDv+v8JnaqNY3gq+A3lMc+rN67sY93mYk/JGWjV1LZ+PqHz/JPMaPzj8tCoQpwgaaWVqe+fm8mEIcDGVawWEpSTDHFosYupizV+D2PFl5l7MQq0gTmm+cMnBg6/gdDuzDXGdQijorLLJ1mQys42YCKwUqVmfKJKznNqBPvjEubiXKYqzbtHcxWvSEx0Lzs875Ot58vfzH4FWsunl/o0L2VYLy6nxT4mLc7j7SZgQjKAz/xrSXJd/mto=
+  app: recipe-app-sauasmast
