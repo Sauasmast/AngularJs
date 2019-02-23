@@ -1,0 +1,25 @@
+sudo: required
+addons:
+    chrome: stable
+
+language: node_js
+node_js:
+    - "10"
+
+branches:
+    only:
+        - master
+
+before_script:
+    - npm install -g @angular/cli
+
+script:
+    - ./build_project.sh
+    - ./deploy_project.sh
+
+deploy:
+    provider: heroku
+    api_key:
+	secure:d7be8534-22c7-4377-98f7-cc4d25c170ce
+	app: recipe-app-sauasmast
+
