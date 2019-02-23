@@ -11,6 +11,8 @@ before_script:
   - npm install -g @angular/cli
 script:
   - './build_project.sh'
+before_deploy:
+  - './before_deploy.sh'
 deploy:
   provider: heroku
   api_key:
